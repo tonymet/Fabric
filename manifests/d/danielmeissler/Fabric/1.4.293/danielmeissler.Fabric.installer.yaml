@@ -1,0 +1,14 @@
+# Created using wingetcreate 1.10.3.0
+# yaml-language-server: $schema=https://aka.ms/winget-manifest.installer.1.10.0.schema.json
+
+PackageIdentifier: danielmeissler.Fabric
+PackageVersion: 1.4.293
+InstallerType: portable
+Commands:
+- fabric
+Installers:
+- Architecture: x64
+  InstallerUrl: https://github.com/danielmiessler/fabric/releases/latest/download/fabric-windows-amd64.exe
+  InstallerSha256: FBB8AEF589E2ACE39793005C67DE41CAFE24E67716D4903D21C20465D5B0768C
+ManifestType: installer
+ManifestVersion: 1.10.0
