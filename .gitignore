@@ -353,3 +353,6 @@ tmp/
 
 # Ignore .claude/
 .claude/
+
+__debug_bin*
+test-signing-key.pfx
