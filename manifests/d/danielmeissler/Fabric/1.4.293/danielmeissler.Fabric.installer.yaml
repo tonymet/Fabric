@@ -8,7 +8,7 @@ Commands:
 - fabric
 Installers:
 - Architecture: x64
-  InstallerUrl: https://github.com/danielmiessler/fabric/releases/latest/download/fabric-windows-amd64.exe
-  InstallerSha256: FBB8AEF589E2ACE39793005C67DE41CAFE24E67716D4903D21C20465D5B0768C
+  InstallerUrl: https://github.com/tonymet/Fabric/releases/download/v1.4.294/fabric-windows-amd64.exe
+  InstallerSha256: F1CDF850C5EA6C2DC1FAF33BD5F39D737E1656C3945C80C8A268B6F921A3720B
 ManifestType: installer
 ManifestVersion: 1.10.0
