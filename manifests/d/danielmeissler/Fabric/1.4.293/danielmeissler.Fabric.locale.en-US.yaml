@@ -1,10 +1,10 @@
 # Created using wingetcreate 1.10.3.0
 # yaml-language-server: $schema=https://aka.ms/winget-manifest.defaultLocale.1.10.0.schema.json
 
-PackageIdentifier: danielmeissler.Fabric
+PackageIdentifier: danielmiessler.Fabric
 PackageVersion: 1.4.293
 PackageLocale: en-US
-Publisher: danielmeissler
+Publisher: danielmiessler
 PackageName: Fabric
 License: MIT License
 ShortDescription: Fabric is an open-source framework for augmenting humans using AI.
