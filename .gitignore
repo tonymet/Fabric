@@ -356,3 +356,5 @@ tmp/
 
 __debug_bin*
 test-signing-key.pfx
+fabric-windows-amd64.exe
+test-release/fabric-windows-amd64.exe.zip
