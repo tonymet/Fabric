@@ -1,12 +1,6 @@
 name: Go Release
 
 on:
-  workflow_dispatch:
-    inputs:
-      codesign:
-        description: 'Sign the Windows binary'
-        type: boolean
-        default: true
   repository_dispatch:
     types: [tag_created]
   push:
@@ -101,10 +95,10 @@ jobs:
         run: |
           go build -o fabric-windows-${{ matrix.arch }}.exe ./cmd/fabric
       - name: Sign Binary on Windows
-        if: github.event.inputs.codesign == 'true' && matrix.os == 'windows-latest'
+        if: true && matrix.os == 'windows-latest'
         uses: tonymet/code-sign-action@v1.0.1
         with:
-          file: fabric-windows-${{ matrix.arch }}.exe 
+          file: fabric-windows-${{ matrix.arch }}.exe
           certificate-data: ${{ secrets.WINDOWS_CERT_BASE64 }}
           certificate-password: ${{ secrets.WINDOWS_CERT_PASSWORD }}
       - name: Upload build artifact
