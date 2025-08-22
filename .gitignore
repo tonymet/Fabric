@@ -354,7 +354,10 @@ tmp/
 # Ignore .claude/
 .claude/
 
+# testing CI / CD codesigning
+test*.pfx
+test*.pk12
 __debug_bin*
 test-signing-key.pfx
 fabric-windows-amd64.exe
-test-release/fabric-windows-amd64.exe.zip
+test-release

@@ -1,1 +1,1 @@
-$cert = New-SelfSignedCertificate -Subject "CN=Test Fabric Signing Certificate" -Type CodeSigningCert -CertStoreLocation Cert:\CurrentUser\My -HashAlgorithm SHA256
+New-SelfSignedCertificate -Subject "CN=Test Fabric Signing Certificate" -Type CodeSigningCert -CertStoreLocation Cert:\CurrentUser\My -HashAlgorithm SHA256
