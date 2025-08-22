@@ -101,7 +101,7 @@ jobs:
         run: |
           go build -o fabric-windows-${{ matrix.arch }}.exe ./cmd/fabric
       - name: Sign Binary on Windows
-        if: inputs.codesign && matrix.os == 'windows-latest'
+        if: github.event.inputs.codesign == 'true' && matrix.os == 'windows-latest'
         uses: tonymet/code-sign-action@v1.0.1
         with:
           file: fabric-windows-${{ matrix.arch }}.exe 
