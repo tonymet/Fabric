@@ -22,6 +22,7 @@ builds:
       - linux
       - windows
       - darwin
+    main: ./cmd/fabric
 
 archives:
   - formats: [tar.gz]
