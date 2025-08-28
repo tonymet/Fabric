@@ -8,6 +8,7 @@
 
 version: 2
 
+project_name: fabric
 before:
   hooks:
     # You may remove this if you don't use go modules.
@@ -23,6 +24,8 @@ builds:
       - windows
       - darwin
     main: ./cmd/fabric
+    binary: fabric
+
 
 archives:
   - formats: [tar.gz]
