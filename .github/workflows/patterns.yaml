@@ -11,22 +11,25 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           fetch-depth: 0
 
       - name: Verify Changes in Patterns Folder
+        id: verify
         run: |
           git fetch origin
           if git diff --quiet HEAD~1 -- data/patterns; then
             echo "No changes detected in patterns folder."
-            exit 1
+            echo "::set-output name=skip::true"
+            exit 0
           fi
-
       - name: Zip the Patterns Folder
+        if: steps.verify.outputs.skip != 'true'
         run: zip -r patterns.zip data/patterns/
 
       - name: Upload Patterns Artifact
+        if: steps.verify.outputs.skip != 'true'
         uses: actions/upload-artifact@v4
         with:
           name: patterns
